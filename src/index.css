@@ -92,12 +92,10 @@ nav h1 {
   font-weight: 700;
   right: 10px;
   color: var(--color-dark);
-  border-radius: 50%;
-  width: 40px;
   height: 0;
   padding: 20px 0;
   line-height: 0px;
-  text-align: center;
+  text-align: right;
 }
 
 .player-card .shots a {
