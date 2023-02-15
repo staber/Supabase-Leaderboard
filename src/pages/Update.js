@@ -5,7 +5,8 @@ import supabase from '../config/supabaseClient'
 const Update = () => {
   const { id } = useParams()
   const navigate = useNavigate()
-
+  
+  const [shots_left, setShotsLeft] = useState(10000)
   const [first_name, setFirstName] = useState('')
   const [last_name, setLastName] = useState('')
   const [shots, setShots] = useState('')
@@ -61,6 +62,7 @@ const Update = () => {
         setLastName(data.last)
         setShots(data.shots)
         setNewShots('0')
+        setShotsLeft(10000-data.shots)
       }
     }
 
@@ -69,22 +71,38 @@ const Update = () => {
   }, [id, navigate])
 
   return (
-    <div className="page update">
-      <form onSubmit={handleSubmit}>
-        <h3>Add shots for {first_name} {last_name}</h3>
+    <div className="root">
+      <nav>
+        <h1>Add shots for {first_name} {last_name}</h1>
+      </nav>
+      <div className="page update">
+        <form onSubmit={handleSubmit}>
 
-        <label htmlFor="shots"></label>
-        <input 
-          type="number"
-          id="shots"
-          value={ newShots }
-          onChange={(e) => setNewShots(e.target.value)}
-        />
+          <p>{first_name} has {shots} shots so far, {shots_left} shots left to reach 10,000.</p>
 
-        <button>Add Shots</button>
+          <div><br></br></div>
+          <label htmlFor="shots"></label>
+          <input 
+            type="number"
+            id="shots"
+            value={ newShots }
+            onChange={(e) => setNewShots(e.target.value)}
+          />
 
-        {formError && <p className='error'>{formError}</p>}
-      </form>
+          <button>Add Shots</button>
+
+          <div><br></br></div>
+          <p>Some shot types to work on include:</p>
+          <li>Wrist shot from left foot</li>
+          <li>Wrist shot from right foot</li>
+          <li>Snap shot</li>
+          <li>Slap shot</li>
+          <li>Backhand shot</li>
+          <li>Pass off rebounder for more variety!</li>
+
+          {formError && <p className='error'>{formError}</p>}
+        </form>
+      </div>
     </div>
   )
 }
