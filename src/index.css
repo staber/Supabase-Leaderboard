@@ -62,8 +62,8 @@ nav h1 {
 }
 .player-card .avatar {
   border-radius: 50%;
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   margin-right: 1em;
   object-fit: cover;
   object-position: 100% 0;
@@ -71,19 +71,19 @@ nav h1 {
 .player-card .name {
   padding: 4px;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   vertical-align: top;
   position: relative;
 }
 .player-card .number {
   text-align: left;
-  padding: 4px;
+  padding: 1px;
   font-size: 1rem;
   font-weight: 300;
   position: absolute;
-  bottom: 12px;
-  left: 100px;
+  bottom: 10px;
+  left: 94px;
 }
 .player-card .shots {
   position: absolute;
