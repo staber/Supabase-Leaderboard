@@ -91,6 +91,8 @@ const Update = () => {
 
           <button>Add Shots</button>
 
+          {formError && <p className='error'>{formError}</p>}
+
           <div><br></br></div>
           <p>Some shot types to work on include:</p>
           <li>Wrist shot from left foot</li>
@@ -99,8 +101,6 @@ const Update = () => {
           <li>Slap shot</li>
           <li>Backhand shot</li>
           <li>Pass off rebounder for more variety!</li>
-
-          {formError && <p className='error'>{formError}</p>}
         </form>
       </div>
     </div>
