@@ -1,5 +1,6 @@
 import supabase from "../config/supabaseClient"
 import { useEffect, useState } from 'react'
+import { Link } from "react-router-dom"
 
 import PlayerCard from "../components/PlayerCard"
 
@@ -31,24 +32,30 @@ const Home = () => {
   }, [orderBy])
 
   return (
-    <div className="page home">
-      {fetchError && (<p>{fetchError}</p>)}
-      {players && (
-        <div className="players">
-          <div className="order-by">
-            <p>Order By:</p>
-            <button onClick={() => setOrderBy('number')}>Number</button>
-            <button onClick={() => setOrderBy('last')}>Last Name</button>
-            <button onClick={() => setOrderBy('shots')}>Shots</button>
-            <div className="player-list">
-              {players.map(player => (
-                <PlayerCard key={player.id} player={player} />
-              ))}
+    <div className="root">
+      <nav>
+        <h1>Shooting Leaderboard</h1>
+      </nav>
+      <div className="page home">
+        {fetchError && (<p>{fetchError}</p>)}
+        {players && (
+          <div className="players">
+            <div className="order-by">
+              <p>Order By:</p>
+              <button onClick={() => setOrderBy('number')}>Number</button>
+              <button onClick={() => setOrderBy('last')}>Last Name</button>
+              <button onClick={() => setOrderBy('shots')}>Shots</button>
+              <div className="player-list">
+                {players.map(player => (
+                  <PlayerCard key={player.id} player={player} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
+    
   )
 }
 
