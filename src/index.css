@@ -85,7 +85,7 @@ nav h1 {
   bottom: 10px;
   left: 94px;
 }
-.player-card .shots {
+.player-card .stat {
   position: absolute;
   top: 10px;
   font-size: 1.5rem;
@@ -98,19 +98,19 @@ nav h1 {
   text-align: right;
 }
 
-.player-card .shots a {
+.player-card .stat a {
   cursor: default;
   text-decoration: none;
   color: var(--color-dark);
 }
 
-.player-card .shots a:visited {
+.player-card .stat a:visited {
   cursor: default;
   text-decoration: none;
   color: var(--color-dark);
 }
 
-.player-card .shots a:hover {
+.player-card .stat a:hover {
   cursor: default;
   text-decoration: none;
   color: var(--color-dark);
@@ -154,6 +154,7 @@ form button {
   border-radius: 6px;
   padding: 6px 8px;
   margin-right: 16px;
+  float: right;
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
@@ -175,4 +176,24 @@ form button {
 .order-by button:hover {
   background-color: var(--primary);
   color: var(--color-light);
+}
+.order-by a {
+  margin-right: 10px;
+  background-color: transparent;
+  color: var(--color-dark);
+  border: 1px solid var(--color-light);
+  padding: .5em 2em;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.order-by a:hover {
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--color-light);
+}
+.order-by a:visited {
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--color-dark);
 }

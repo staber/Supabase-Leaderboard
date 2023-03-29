@@ -7,14 +7,14 @@ import PlayerCard from "../components/PlayerCard"
 const Home = () => {
   const [fetchError, setFetchError] = useState(null)
   const [players, setPlayers] = useState(null)
-  const [orderBy, setOrderBy] = useState('shots')
+  const [orderBy, setOrderBy] = useState('rebounder_hours')
 
   useEffect(() => {
     const fetchPlayers = async () => {
       const { data, error } = await supabase
       .from('players')
       .select()
-      .order(orderBy, {ascending: (orderBy == 'shots' ? false : true)})
+      .order(orderBy, {ascending: (orderBy == 'rebounder_hours' ? false : true)})
 
       if (error) {
         setFetchError('Could not fetch player database')
@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <div className="root">
       <nav>
-        <h1>Shooting Leaderboard</h1>
+        <h1>Rebounder Leaderboard</h1>
       </nav>
       <div className="page home">
         {fetchError && (<p>{fetchError}</p>)}
@@ -46,7 +46,7 @@ const Home = () => {
               <Link to="/wristreps">Wrist Roller</Link>
               <div className="player-list">
                 {players.map(player => (
-                  <PlayerCard key={player.id} player={player} stat={'shots'}/>
+                  <PlayerCard key={player.id} player={player} stat={'rebounder'} />
                 ))}
               </div>
             </div>
