@@ -38,94 +38,11 @@ nav a {
 }
 nav h1 {
   color: var(--color-light);
+  font-size: 1.3rem;
 }
 .page {
   margin: auto;
   padding: 20px;
-}
-
-/* player list */
-.player-list {
-  margin: 20px auto;
-  margin-top: 40px;
-  width: 60%;
-  max-width: 600px;
-  min-width: 350px;
-}
-.player-card {
-  display: flex;
-  padding: 10px;
-  margin-bottom: 20px;
-  background: var(--color-light);
-  border-radius: 6px;
-  position: relative;
-}
-.player-card .avatar {
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
-  margin-right: 1em;
-  object-fit: cover;
-  object-position: 100% 0;
-}
-.player-card .name {
-  padding: 4px;
-  text-align: left;
-  font-size: 1.1rem;
-  font-weight: 700;
-  vertical-align: top;
-  position: relative;
-}
-.player-card .number {
-  text-align: left;
-  padding: 1px;
-  font-size: 1rem;
-  font-weight: 300;
-  position: absolute;
-  bottom: 10px;
-  left: 94px;
-}
-.player-card .stat {
-  position: absolute;
-  top: 10px;
-  font-size: 1.5rem;
-  font-weight: 700;
-  right: 10px;
-  color: var(--color-dark);
-  height: 0;
-  padding: 20px 0;
-  line-height: 0px;
-  text-align: right;
-}
-
-.player-card .stat a {
-  cursor: default;
-  text-decoration: none;
-  color: var(--color-dark);
-}
-
-.player-card .stat a:visited {
-  cursor: default;
-  text-decoration: none;
-  color: var(--color-dark);
-}
-
-.player-card .stat a:hover {
-  cursor: default;
-  text-decoration: none;
-  color: var(--color-dark);
-}
-.player-card .buttons {
-  text-align: right;
-}
-.player-card i {
-  color: var(--color-light);
-  margin-left: 10px;
-  font-size: 1.2em;
-  padding: 6px;
-  background: var(--color-light);
-  border-radius: 50%;
-  cursor: none;
 }
 
 /* forms */
@@ -163,6 +80,7 @@ form button {
 /* order-by buttons */
 .order-by {
   text-align: center;
+  font-size: 0.9rem;
 }
 .order-by button {
   margin-right: 10px;
@@ -182,7 +100,7 @@ form button {
   background-color: transparent;
   color: var(--color-dark);
   border: 1px solid var(--color-light);
-  padding: .5em 2em;
+  padding: .5em 1em;
   border-radius: 50px;
   text-decoration: none;
   cursor: pointer;
@@ -196,4 +114,90 @@ form button {
   text-decoration: none;
   background-color: var(--primary);
   color: var(--color-dark);
+}
+
+
+/* player list */
+.player-list {
+  margin: 20px auto;
+  margin-top: 40px;
+  width: 60%;
+  max-width: 600px;
+  min-width: 350px;
+}
+.player-card {
+  display: flex;
+  padding: 4px;
+  padding-top: 16px;
+  margin-bottom: 20px;
+  background: var(--color-light);
+  border-radius: 6px;
+  position: relative;
+}
+.player-card a {
+  cursor: default;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.player-card a:visited {
+  cursor: default;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.player-card a:hover {
+  cursor: default;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+.player-card .avatar {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  margin-right: 1em;
+  padding: 4px;
+  object-fit: cover;
+  object-position: 100% 0;
+}
+.player-card .name {
+  padding: 4px;
+  text-align: left;
+  font-size: 1.0rem;
+  font-weight: 700;
+  vertical-align: top;
+  position: relative;
+}
+.player-card .number {
+  text-align: left;
+  padding: 1px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  position: absolute;
+  bottom: 18px;
+  left: 94px;
+}
+.player-card .stat {
+  position: absolute;
+  top: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  right: 4px;
+  color: var(--color-dark);
+  height: 0;
+  padding: 20px 0;
+  line-height: 0px;
+  text-align: right;
+}
+.player-card .buttons {
+  text-align: right;
+}
+.player-card i {
+  color: var(--color-light);
+  margin-left: 10px;
+  font-size: 1.2em;
+  padding: 6px;
+  background: var(--color-light);
+  border-radius: 50%;
+  cursor: none;
 }

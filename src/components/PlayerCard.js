@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom'
 const PlayerCard = ({ player, stat }) => {
     return (
         <div className="player-card">
-            <img className='avatar' src={player.avatar} alt="" />
-            <h3 className='name'>{player.first} {player.last}</h3>
+            <Link to={'/' + player.id}>
+                <img className='avatar' src={player.avatar} alt="" />
+            </Link>
+            <Link to={'/' + player.id}>
+                <h3 className='name'>{player.first} {player.last}</h3>
+            </Link>
             <p className='number'>#{player.number}</p>
             <div className="stat">
                 <Link to={'/' + player.id}>

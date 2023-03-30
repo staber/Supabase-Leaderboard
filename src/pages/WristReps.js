@@ -37,18 +37,18 @@ const Home = () => {
         <h1>Wrist Roller Reps Leaderboard</h1>
       </nav>
       <div className="page home">
+        <div className="order-by">
+          <Link to="/">Shots</Link>
+          <Link to="/rebounder">Rebounder</Link>
+          <Link to="/wristreps">Wrist Roller</Link>
+        </div>
         {fetchError && (<p>{fetchError}</p>)}
         {players && (
           <div className="players">
-            <div className="order-by">
-              <Link to="/">Shots</Link>
-              <Link to="/rebounder">Rebounder</Link>
-              <Link to="/wristreps">Wrist Roller</Link>
-              <div className="player-list">
-                {players.map(player => (
-                  <PlayerCard key={player.id} player={player} stat={'wrist'} />
-                ))}
-              </div>
+            <div className="player-list">
+              {players.map(player => (
+                <PlayerCard key={player.id} player={player} stat={'wrist'}/>
+              ))}
             </div>
           </div>
         )}
