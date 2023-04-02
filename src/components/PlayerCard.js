@@ -12,7 +12,7 @@ const PlayerCard = ({ player, stat }) => {
             <p className='number'>#{player.number}</p>
             <div className="stat">
                 <Link to={'/' + player.id}>
-                    {stat == 'shots' ? player.shots : (stat == 'wrist' ? player.wrist_roller_reps : player.rebounder_hours)}
+                    {stat == 'shots' ? player.shots : (stat == 'wrist' ? player.wrist_roller_reps : player.rebounder_mins)}
                 </Link>
             </div>
         </div>

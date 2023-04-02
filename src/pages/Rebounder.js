@@ -7,14 +7,14 @@ import PlayerCard from "../components/PlayerCard"
 const Home = () => {
   const [fetchError, setFetchError] = useState(null)
   const [players, setPlayers] = useState(null)
-  const [orderBy, setOrderBy] = useState('rebounder_hours')
+  const [orderBy, setOrderBy] = useState('rebounder_mins')
 
   useEffect(() => {
     const fetchPlayers = async () => {
       const { data, error } = await supabase
       .from('players')
       .select()
-      .order(orderBy, {ascending: (orderBy == 'rebounder_hours' ? false : true)})
+      .order(orderBy, {ascending: (orderBy == 'rebounder_mins' ? false : true)})
 
       if (error) {
         setFetchError('Could not fetch player database')

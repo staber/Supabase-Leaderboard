@@ -16,7 +16,7 @@ const Update = () => {
 
   const [rebound, setRebound] = useState('')
   const [newRebound, setNewRebound] = useState('0')
-  const [rebounds_left, setReboundsLeft] = useState(75)
+  const [rebounds_left, setReboundsLeft] = useState(4500)
 
   const [wristReps, setWristReps] = useState('')
   const [newWristReps, setNewWristReps] = useState('0')
@@ -34,10 +34,10 @@ const Update = () => {
       return
     }
     if (!newRebound) {
-      setFormError('Please enter a valid number of rebounder hours')
+      setFormError('Please enter a valid number of rebounder minutes')
       return
     } else if (newRebound < 0) {
-      setFormError('Please enter a positive number of rebounder hours')
+      setFormError('Please enter a positive number of rebounder minutes')
       return
     }
     if (!newWristReps) {
@@ -78,9 +78,9 @@ const Update = () => {
         setShots(data.shots)
         setNewShots('0')
         setShotsLeft(10000-data.shots)
-        setRebound(data.rebounder_hours)
+        setRebound(data.rebounder_mins)
         setNewRebound('0')
-        setReboundsLeft(75-data.rebounder_hours)
+        setReboundsLeft(4500-data.rebounder_mins)
         setWristReps(data.wrist_roller_reps)
         setNewWristReps('0')
         setWristRollerLeft(1000-data.wrist_roller_reps)
@@ -121,7 +121,7 @@ const Update = () => {
           <p>{first_name} has {wristReps} wrist roller reps so far, {wrist_roller_left} reps left to reach 1,000.</p>
 
           <div><br></br></div>
-          <h3>Rebounder Hours</h3>
+          <h3>Rebounder Minutes</h3>
           <label htmlFor="rebounder"></label>
           <input 
             type="number"
@@ -129,7 +129,7 @@ const Update = () => {
             value={ newRebound }
             onChange={(g) => setNewRebound(g.target.value)}
           />
-          <p>{first_name} has {rebound} rebouder hours so far, {rebounds_left} hours left to reach 75.</p>
+          <p>{first_name} has {rebound} rebouder minutes so far, {rebounds_left} minutes left to reach 4,500 (75 Hours).</p>
 
           <div><br></br></div>
           <button>Add Stats</button>
