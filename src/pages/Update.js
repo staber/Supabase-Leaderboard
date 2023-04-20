@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import supabase from '../config/supabaseClient'
+import ProgressBar from "@ramonak/react-progress-bar";
 
 const Update = () => {
   const { id } = useParams()
@@ -107,18 +108,14 @@ const Update = () => {
             value={ newShots }
             onChange={(e) => setNewShots(e.target.value)}
           />
+          <ProgressBar 
+            completed={parseFloat((Math.round(100*shots)/10000).toFixed(1))}
+            bgColor="#7fbfe9"
+            labelAlignment="outside"
+            labelColor="#000000"
+            animateOnRender="true"
+            />
           <p>{first_name} has {shots} shots so far, {shots_left} shots left to reach 10,000.</p>
-
-          <div><br></br></div>
-          <h3>Wrist Roller Reps</h3>
-          <label htmlFor="wrist"></label>
-          <input 
-            type="number"
-            id="wrist"
-            value={ newWristReps }
-            onChange={(f) => setNewWristReps(f.target.value)}
-          />
-          <p>{first_name} has {wristReps} wrist roller reps so far, {wrist_roller_left} reps left to reach 1,000.</p>
 
           <div><br></br></div>
           <h3>Rebounder Minutes</h3>
@@ -129,7 +126,32 @@ const Update = () => {
             value={ newRebound }
             onChange={(g) => setNewRebound(g.target.value)}
           />
+          <ProgressBar 
+            completed={parseFloat((Math.round(100*rebound)/4500).toFixed(1))}
+            bgColor="#7fbfe9"
+            labelAlignment="outside"
+            labelColor="#000000"
+            animateOnRender="true"
+            />
           <p>{first_name} has {rebound} rebouder minutes so far, {rebounds_left} minutes left to reach 4,500 (75 Hours).</p>
+
+          <div><br></br></div>
+          <h3>Wrist Roller Reps</h3>
+          <label htmlFor="wrist"></label>
+          <input 
+            type="number"
+            id="wrist"
+            value={ newWristReps }
+            onChange={(f) => setNewWristReps(f.target.value)}
+          />
+          <ProgressBar 
+            completed={parseFloat((Math.round(100*wristReps)/1000).toFixed(1))}
+            bgColor="#7fbfe9"
+            labelAlignment="outside"
+            labelColor="#000000"
+            animateOnRender="true"
+            />
+          <p>{first_name} has {wristReps} wrist roller reps so far, {wrist_roller_left} reps left to reach 1,000.</p>
 
           <div><br></br></div>
           <button>Add Stats</button>

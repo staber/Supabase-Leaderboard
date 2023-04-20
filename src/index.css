@@ -1,9 +1,11 @@
 
 :root {
-  --primary: #ff671f;
+  --primary: #ff671b;
   --secondary: #000000;
   --color-dark: #2C3131;
   --color-light: #F3F3F2;
+  --color-white: #FFFFFF;
+  --color-accent: #7fbfe9;
 }
 
 #main{
@@ -66,10 +68,10 @@ form input, form textarea {
 }
 form button {
   background: var(--primary);
-  color: var(--color-light);
+  color: var(--color-white);
   border: 0;
   border-radius: 6px;
-  padding: 6px 8px;
+  padding: 10px 14px;
   margin-right: 16px;
   float: right;
   font-size: 1.2rem;
