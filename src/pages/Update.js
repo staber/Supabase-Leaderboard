@@ -115,7 +115,8 @@ const Update = () => {
             labelColor="#000000"
             animateOnRender="true"
             />
-          <p>{first_name} has {shots} shots so far, {shots_left} shots left to reach 10,000.</p>
+          {shots < 10000 && (<p>{first_name} has {shots} shots so far, {shots_left} shots left to reach 10,000.</p>)} 
+          {shots >= 10000 && (<p>{first_name} has {shots} shots so far!  Keep up the great work!</p>)}
 
           <div><br></br></div>
           <h3>Rebounder Minutes</h3>
@@ -133,7 +134,8 @@ const Update = () => {
             labelColor="#000000"
             animateOnRender="true"
             />
-          <p>{first_name} has {rebound} rebouder minutes so far, {rebounds_left} minutes left to reach 4,500 (75 Hours).</p>
+          {rebound < 4500 && (<p>{first_name} has {rebound} rebouder minutes so far, {rebounds_left} minutes left to reach 4,500 (75 Hours).</p>)} 
+          {rebound >= 4500 && (<p>{first_name} has {rebound} rebouder minutes so far!  Keep up the great work!</p>)}
 
           <div><br></br></div>
           <h3>Wrist Roller Reps</h3>
@@ -151,7 +153,9 @@ const Update = () => {
             labelColor="#000000"
             animateOnRender="true"
             />
-          <p>{first_name} has {wristReps} wrist roller reps so far, {wrist_roller_left} reps left to reach 1,000.</p>
+          {wristReps < 1000 && (<p>{first_name} has {wristReps} wrist roller reps so far, {wrist_roller_left} reps left to reach 1,000.</p>)} 
+          {wristReps >= 1000 && (<p>{first_name} has {wristReps} wrist roller reps so far!  Keep up the great work!</p>)}
+          <p></p>
 
           <div><br></br></div>
           <button>Add Stats</button>
