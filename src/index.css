@@ -213,3 +213,8 @@ form button {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.button {
+  margin: 0;
+  padding: 10px;
+}

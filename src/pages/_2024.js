@@ -2,8 +2,7 @@ const _2024 = () => {
     return (
         <body>
             <div class="vertical-center">
-                <button onclick="location.href='https://lcfh2011.streamlit.app'" type="button">
-                    Continue...</button>
+                <a href="https://lcfh2011.streamlit.app" class="button"><button type="button">Continue...</button></a>
             </div>
         </body>        
     )
