@@ -3,7 +3,7 @@ const _2024 = () => {
         <body>
             <div class="vertical-center">
                 <button>Continue...
-                    <a href="https://lcfh2011.streamlit.app" target="_blank"></a>
+                    <a href="https://lcfh2011.streamlit.app"></a>
                 </button>
             </div>
         </body>        
