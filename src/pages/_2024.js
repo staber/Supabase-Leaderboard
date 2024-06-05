@@ -1,8 +1,8 @@
 const _2024 = () => {
     return (
-      <div className="page 2024">
-        <h2>2024</h2>
-      </div>
+        <div class="vertical-center">
+            <button>Continue...</button>
+        </div>
     )
   }
   

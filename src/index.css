@@ -79,6 +79,15 @@ form button {
   cursor: pointer;
 }
 
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /* order-by buttons */
 .order-by {
   text-align: center;
