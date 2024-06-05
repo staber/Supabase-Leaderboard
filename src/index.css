@@ -79,16 +79,6 @@ form button {
   cursor: pointer;
 }
 
-.vertical-center {
-  margin: 0;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
 /* order-by buttons */
 .order-by {
   text-align: center;
@@ -212,4 +202,14 @@ form button {
   background: var(--color-light);
   border-radius: 50%;
   cursor: none;
+}
+
+.vertical-center {
+  margin: 0;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
