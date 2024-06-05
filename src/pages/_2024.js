@@ -1,7 +1,9 @@
 const _2024 = () => {
     return (
         <div class="vertical-center">
-            <button>Continue...</button>
+            <button>Continue...
+                <a href="http://lcfh2011.streamlit.app" target="_blank"></a>
+            </button>
         </div>
     )
   }
