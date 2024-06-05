@@ -26,7 +26,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--color-light);
+  background: var(--color-dark);
 }
 nav {
   background: var(--primary);
@@ -81,7 +81,7 @@ form button {
 
 .vertical-center {
   margin: 0;
-  padding: 10px;
+  padding: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
